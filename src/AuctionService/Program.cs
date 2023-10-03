@@ -18,5 +18,11 @@ var app = builder.Build();
 app.UseAuthorization();
 
 app.MapControllers();
+try{
+      DbInitializer.InitDb(app);
+}
+catch(Exception e){
+      Console.WriteLine(e);
+}
 
 app.Run();
