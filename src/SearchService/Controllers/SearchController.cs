@@ -1,6 +1,6 @@
-﻿namespace SearchService.Controllers;
+﻿namespace SearchService.Controller;
 
-public class SearchControllet
+public class SearchController
 {
 
 }
