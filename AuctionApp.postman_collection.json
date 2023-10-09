@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "5b807e29-d1cc-4696-936a-fac6a69eaf8b",
+		"name": "AuctionApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22000295"
+	},
+	"item": [
+		{
+			"name": "AuctionRequests",
+			"item": [
+				{
+					"name": "GetAuctions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test('Status code is 200', function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"pm.test('Should be 10 items', function() {\r",
+									"    pm.expect(jsonData.length).to.equal(10);\r",
+									"})\r",
+									"\r",
+									"pm.test('First item should be Audi R8', function() {\r",
+									"    pm.expect(jsonData[0].make).to.eq('Audi');\r",
+									"    pm.expect(jsonData[0].model).to.eq('R8');\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7001/api/auctions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAuction",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test('Status code is 200', function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"pm.test('Item is Ferrari Spider', function() {\r",
+									"    pm.expect(jsonData.make).to.eq('Ferrari');\r",
+									"    pm.expect(jsonData.model).to.eq('Spider');\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7001/api/auctions/dc1e4071-d19d-459b-b848-b5c3cd3d151f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"auctions",
+								"dc1e4071-d19d-459b-b848-b5c3cd3d151f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAuction",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var date = new Date()\r",
+									"date.setDate(date.getDate() + 14);\r",
+									"var dateString = date.toISOString();\r",
+									"pm.variables.set(\"dateString\", dateString);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response body contains expected properties\", function () {\r",
+									"    pm.expect(jsonData).to.haveOwnProperty('id');\r",
+									"    pm.expect(jsonData).to.haveOwnProperty('make');\r",
+									"    pm.expect(jsonData).to.haveOwnProperty('model');\r",
+									"    pm.expect(jsonData).to.haveOwnProperty('year');\r",
+									"    pm.expect(jsonData).to.haveOwnProperty('imageUrl');\r",
+									"    pm.expect(jsonData).to.haveOwnProperty('seller');\r",
+									"    pm.expect(jsonData.status).to.eq('Live');\r",
+									"});\r",
+									"\r",
+									"pm.collectionVariables.set(\"createdItemId\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"make\": \"Ford\",\r\n  \"model\": \"Escort\",\r\n  \"color\": \"White\",\r\n  \"year\": \"2021\",\r\n  \"mileage\": \"10000\",\r\n  \"imageUrl\": \"https://cdn.pixabay.com/photo/2018/02/04/15/45/car-3130111_960_720.jpg\",\r\n  \"reservePrice\": 100,\r\n  \"auctionEnd\": \"{{dateString}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7001/api/auctions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"auctions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAuction",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"make\": \"Ford Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7001/api/auctions/{{createdItemId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"auctions",
+								"{{createdItemId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAuction",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status code is 200', function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7001/api/auctions/{{createdItemId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"auctions",
+								"{{createdItemId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "createdItemId",
+			"value": ""
+		}
+	]
+}
