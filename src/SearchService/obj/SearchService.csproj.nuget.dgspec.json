@@ -49,10 +49,13 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+<<<<<<< HEAD
             "Microsoft.Extensions.Http.Polly": {
               "target": "Package",
               "version": "[7.0.12, )"
             },
+=======
+>>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
             "MongoDB.Entities": {
               "target": "Package",
               "version": "[22.1.0, )"

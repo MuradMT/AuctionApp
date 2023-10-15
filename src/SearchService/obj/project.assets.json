@@ -85,7 +85,40 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
+=======
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/6.0.0": {
+>>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
@@ -690,10 +723,17 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.Extensions.DependencyInjection/7.0.0": {
       "sha512": "elNeOmkeX3eDVG6pYVeV82p29hr+UKDaBhrZyWvWLw/EVZSYEkZlQdkp0V39k/Xehs2Qa0mvoCvkVj3eQxNQ1Q==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/7.0.0",
+=======
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "sha512": "xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
+>>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1395,7 +1435,10 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+<<<<<<< HEAD
       "Microsoft.Extensions.Http.Polly >= 7.0.12",
+=======
+>>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
       "MongoDB.Entities >= 22.1.0"
     ]
   },
@@ -1448,10 +1491,13 @@
             "target": "Package",
             "version": "[12.0.1, )"
           },
+<<<<<<< HEAD
           "Microsoft.Extensions.Http.Polly": {
             "target": "Package",
             "version": "[7.0.12, )"
           },
+=======
+>>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
           "MongoDB.Entities": {
             "target": "Package",
             "version": "[22.1.0, )"

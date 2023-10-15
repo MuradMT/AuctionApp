@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 using System.Net;
 using Polly;
 using Polly.Extensions.Http;
+=======
+>>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +33,16 @@ app.Lifetime.ApplicationStarted.Register(async () =>
     }
 
 });
+
+await DB.InitAsync("SearchDb", MongoClientSettings.
+FromConnectionString(builder.Configuration.GetConnectionString("MongoDbConnection")));
+
+await DB.Index<Item>()
+.Key(x=>x.Make,KeyType.Text)
+.Key(x=>x.Model,KeyType.Text)
+.Key(x=>x.Color,KeyType.Text)
+.CreateAsync();
+
 
 app.Run();
 
