@@ -3,3 +3,7 @@ global using Microsoft.EntityFrameworkCore;
 global using System.ComponentModel.DataAnnotations;
 global using System.ComponentModel.DataAnnotations.Schema;
 global using AutoMapper;
+global using AuctionService.Data;
+global using AuctionService.DTOs;
+global using AutoMapper.QueryableExtensions;
+global using Microsoft.AspNetCore.Mvc;
