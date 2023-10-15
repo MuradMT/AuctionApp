@@ -1,10 +1,7 @@
 
-<<<<<<< HEAD
-using System.Net;
-using Polly;
-using Polly.Extensions.Http;
-=======
->>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
+
+
+using SearchService.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +9,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddHttpClient<AuctionSvcHttpClient>().AddPolicyHandler(GetPolicy());
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddMassTransit(x=>{
+    x.AddConsumersFromNamespaceContaining<AuctionCreatedConsumer>();
+    x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("search",false));
+    x.UsingRabbitMq((context,config)=>{
+        config.ReceiveEndpoint("search-auction-created",e=>{
+             e.UseMessageRetry(r=>r.Interval(5,5));
+             e.ConfigureConsumer<AuctionCreatedConsumer>(context);
+        });
+        config.ConfigureEndpoints(context);
+    });
+}
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

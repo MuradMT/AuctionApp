@@ -37,3 +37,14 @@ C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Mono.TextTemplatin
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Npgsql.dll
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\MassTransit.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\MassTransit.Abstractions.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\MassTransit.RabbitMqTransport.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\RabbitMQ.Client.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Contracts.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Contracts.pdb
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\MassTransit.EntityFrameworkCoreIntegration.dll

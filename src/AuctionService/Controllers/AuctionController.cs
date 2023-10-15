@@ -1,16 +1,21 @@
 ﻿
 
+using Contracts;
+using MassTransit;
+
 namespace AuctionService.Controllers;
 [ApiController]
 [Route("api/auctions")]
-public class AuctionController(AuctionDbContext _context, IMapper _mapper) : ControllerBase
+public class AuctionController
+(AuctionDbContext _context,IMapper _mapper,IPublishEndpoint publishEndpoint): ControllerBase
 {
     [HttpGet]
     public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions(string date)
     {
-        var query= _context.Auctions.OrderBy(x=>x.Item.Make).AsQueryable();
-        if(!string.IsNullOrEmpty(date)){
-            query=query.Where(x=>x.UpdatedAt.CompareTo(DateTime.Parse(date).ToUniversalTime())>0);
+        var query = _context.Auctions.OrderBy(x => x.Item.Make).AsQueryable();
+        if (!string.IsNullOrEmpty(date))
+        {
+            query = query.Where(x => x.UpdatedAt.CompareTo(DateTime.Parse(date).ToUniversalTime()) > 0);
         }
 
         return await query.ProjectTo<AuctionDto>(_mapper.ConfigurationProvider).ToListAsync();
@@ -29,10 +34,13 @@ public class AuctionController(AuctionDbContext _context, IMapper _mapper) : Con
     {
         var auction = _mapper.Map<Auction>(dto);
         _context.Auctions.Add(auction);
-        if(await ChangeTracker()){
+        var newAuction=_mapper.Map<AuctionDto>(auction);
+        await publishEndpoint.Publish(_mapper.Map<AuctionCreated>(newAuction));
+        if (await ChangeTracker())
+        {
             return BadRequest("Could not save changes to db");
         }
-        return CreatedAtAction(nameof(GetAuctionById), new { auction.Id }, _mapper.Map<AuctionDto>(auction));
+        return CreatedAtAction(nameof(GetAuctionById), new { auction.Id }, newAuction);
     }
     [HttpPut("{id}")]
     public async Task<ActionResult> UpdateAuction(Guid id, UpdateAuctionDto dto)
@@ -46,7 +54,8 @@ public class AuctionController(AuctionDbContext _context, IMapper _mapper) : Con
         auction.Item.Color = dto.Color ?? auction.Item.Color;
         auction.Item.Mileage = dto.Mileage ?? auction.Item.Mileage;
         auction.Item.Year = dto.Year ?? auction.Item.Year;
-        if(await ChangeTracker()){
+        if (await ChangeTracker())
+        {
             return BadRequest("Could not save changes to db");
         }
         return Ok();
@@ -58,13 +67,15 @@ public class AuctionController(AuctionDbContext _context, IMapper _mapper) : Con
         var auction = await _context.Auctions.FindAsync(id);
         if (auction == null) return NotFound();
         _context.Auctions.Remove(auction);
-        if(await ChangeTracker()){
+        if (await ChangeTracker())
+        {
             return BadRequest("Could not save changes to db");
         }
         return Ok();
     }
-    async Task<bool> ChangeTracker(){
-         var res= await _context.SaveChangesAsync() > 0;
-         return res;
+    async Task<bool> ChangeTracker()
+    {
+        var res = await _context.SaveChangesAsync() > 0;
+        return res;
     }
 }

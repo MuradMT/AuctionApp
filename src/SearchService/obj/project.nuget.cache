@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "v1eZp5xnccvS1pQ6yyFhhlAqSJIy5AITPqJ/iCeML8+mIlKN9LVBDaSvhpxuAUtOzPvDLQeqH0ifgiJn7WERIg==",
-=======
-  "dgSpecHash": "4NYSFWPJbCmTEWzekvcc95MAK1FBl1lUxVxW4cyG0lKOgV4rz/7RMDI03m5MT0oY4eNuHOIScKKgW5w/245Nug==",
->>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
+  "dgSpecHash": "Mzkmw58BHizth3BiKyR9RDSKbnsKrCuqvIfWAOfyTGExipHxO6pAWxLJ1bMQEmpAun07M0YY88qREWnvULEwJg==",
   "success": true,
   "projectFilePath": "C:\\Users\\mamma\\AuctionApp\\src\\SearchService\\SearchService.csproj",
   "expectedPackageFiles": [
@@ -13,22 +9,23 @@
     "C:\\Users\\mamma\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\masstransit\\8.1.1\\masstransit.8.1.1.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\masstransit.abstractions\\8.1.1\\masstransit.abstractions.8.1.1.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\masstransit.rabbitmq\\8.1.1\\masstransit.rabbitmq.8.1.1.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-<<<<<<< HEAD
+    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks\\7.0.1\\microsoft.extensions.diagnostics.healthchecks.7.0.1.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks.abstractions\\7.0.1\\microsoft.extensions.diagnostics.healthchecks.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\7.0.0\\microsoft.extensions.hosting.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.http\\7.0.0\\microsoft.extensions.http.7.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.http.polly\\7.0.12\\microsoft.extensions.http.polly.7.0.12.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
-    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-=======
-    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
-    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\mamma\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
->>>>>>> 142a1e49b0368947de8b5e3f565513bef50602fd
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\mongodb.bson\\2.21.0\\mongodb.bson.2.21.0.nupkg.sha512",
@@ -38,13 +35,20 @@
     "C:\\Users\\mamma\\.nuget\\packages\\mongodb.libmongocrypt\\1.8.0\\mongodb.libmongocrypt.1.8.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.1\\system.diagnostics.diagnosticsource.7.0.1.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512",
+    "C:\\Users\\mamma\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\mamma\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
   ],
   "logs": []

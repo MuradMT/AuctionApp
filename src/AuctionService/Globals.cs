@@ -7,3 +7,4 @@ global using AuctionService.Data;
 global using AuctionService.DTOs;
 global using AutoMapper.QueryableExtensions;
 global using Microsoft.AspNetCore.Mvc;
+global using MassTransit;
