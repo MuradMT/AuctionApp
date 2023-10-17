@@ -1,7 +1,5 @@
 ﻿
 
-using AutoMapper;
-
 namespace SearchService.Consumers;
 
 public class AuctionCreatedConsumer(IMapper mapper): IConsumer<AuctionCreated>

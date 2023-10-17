@@ -1,6 +1,5 @@
 
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,6 +10,8 @@ builder.Services.AddDbContext<AuctionDbContext>(opt=>
 );
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddMassTransit(x=>{
+    x.AddConsumersFromNamespaceContaining<AuctionCreatedFaultConsumer>();
+    x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("auction",false));
     x.AddEntityFrameworkOutbox<AuctionDbContext>(o=>{
         o.QueryDelay=TimeSpan.FromSeconds(10);
         o.UsePostgres();

@@ -48,3 +48,5 @@ C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\RabbitMQ.Client.dl
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Contracts.dll
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Contracts.pdb
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\MassTransit.EntityFrameworkCoreIntegration.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Core.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Core.pdb

@@ -656,6 +656,16 @@
         "runtime": {
           "bin/placeholder/Contracts.dll": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
       }
     }
   },
@@ -1741,12 +1751,18 @@
       "type": "project",
       "path": "../Contracts/Contracts.csproj",
       "msbuildProject": "../Contracts/Contracts.csproj"
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "Contracts >= 1.0.0",
+      "Core >= 1.0.0",
       "MassTransit.EntityFrameworkCore >= 8.1.1",
       "MassTransit.RabbitMQ >= 8.1.1",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.11",
@@ -1788,6 +1804,9 @@
           "projectReferences": {
             "C:\\Users\\mamma\\AuctionApp\\src\\Contracts\\Contracts.csproj": {
               "projectPath": "C:\\Users\\mamma\\AuctionApp\\src\\Contracts\\Contracts.csproj"
+            },
+            "C:\\Users\\mamma\\AuctionApp\\src\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\mamma\\AuctionApp\\src\\Core\\Core.csproj"
             }
           }
         }

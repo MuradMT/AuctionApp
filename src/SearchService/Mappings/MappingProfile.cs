@@ -2,10 +2,11 @@
 
 namespace SearchService.Mappings;
 
-public class MappingProfile:Profile
+public class MappingProfile : Profile
 {
    public MappingProfile()
    {
-        CreateMap<AuctionCreated,Item>();
+      CreateMap<AuctionCreated, Item>();
+      CreateMap<AuctionUpdated, Item>();
    }
 }
