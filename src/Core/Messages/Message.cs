@@ -6,4 +6,5 @@ public static class Message
       public const string ExceptionThrown="Unexpected exception happened:";
       public const string MongoUpdateError="Problem updating mongo";
       public const string AuctionDeletedError="Problem deleting auction";
+      public const string NotUsed="Test Error";
 }
