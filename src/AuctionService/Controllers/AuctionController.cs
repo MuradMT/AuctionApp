@@ -1,5 +1,7 @@
 ﻿
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace AuctionService.Controllers;
 [ApiController]
 [Route("api/auctions")]
@@ -42,12 +44,14 @@ public class AuctionController
             return BadRequest($"{Message.ExceptionThrown}{ex.ToString}");
         }
     }
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto dto)
     {
         try
         {
             var auction = _mapper.Map<Auction>(dto);
+            auction.Seller=User.Identity.Name;
             _context.Auctions.Add(auction);
             var newAuction = _mapper.Map<AuctionDto>(auction);
             await publishEndpoint.Publish(_mapper.Map<AuctionCreated>(newAuction));
@@ -62,6 +66,7 @@ public class AuctionController
             return BadRequest($"{Message.ExceptionThrown}{ex.ToString}");
         }
     }
+    [Authorize]
     [HttpPut("{id}")]
     public async Task<ActionResult> UpdateAuction(Guid id, UpdateAuctionDto dto)
     {
@@ -71,6 +76,7 @@ public class AuctionController
                             .Include(x => x.Item)
                             .FirstOrDefaultAsync(x => x.Id == id);
             if (auction is null) return NotFound();
+            if (auction.Seller!=User.Identity.Name) return Forbid();
             auction.Item.Make = dto.Make ?? auction.Item.Make;
             auction.Item.Model = dto.Model ?? auction.Item.Model;
             auction.Item.Color = dto.Color ?? auction.Item.Color;
@@ -91,6 +97,7 @@ public class AuctionController
 
 
     }
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteAuction(Guid id)
     {
@@ -98,6 +105,7 @@ public class AuctionController
         {
             var auction = await _context.Auctions.FindAsync(id);
             if (auction == null) return NotFound();
+            if(auction.Seller!=User.Identity.Name) return Forbid();
             _context.Auctions.Remove(auction);
             await publishEndpoint.Publish<AuctionDeleted>(new{Id=auction.Id.ToString()});
             if (await ChangeTracker())

@@ -102,3 +102,10 @@ C:\Users\mamma\Downloads\AuctionApp-main\AuctionApp-main\src\AuctionService\obj\
 C:\Users\mamma\Downloads\AuctionApp-main\AuctionApp-main\src\AuctionService\obj\Debug\net7.0\AuctionService.pdb
 C:\Users\mamma\Downloads\AuctionApp-main\AuctionApp-main\src\AuctionService\obj\Debug\net7.0\AuctionService.genruntimeconfig.cache
 C:\Users\mamma\Downloads\AuctionApp-main\AuctionApp-main\src\AuctionService\obj\Debug\net7.0\ref\AuctionService.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
