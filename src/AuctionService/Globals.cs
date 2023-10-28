@@ -9,5 +9,5 @@ global using MassTransit;
 global using Contracts;
 global using System.ComponentModel.DataAnnotations;
 global using System.ComponentModel.DataAnnotations.Schema;
-global using Core.Messages;
+global using AuctionService.Messages;
 global using AuctionService.Consumers;

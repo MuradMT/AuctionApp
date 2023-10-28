@@ -57,8 +57,6 @@ C:\Users\mamma\AuctionApp\src\SearchService\bin\Debug\net7.0\Microsoft.Extension
 C:\Users\mamma\AuctionApp\src\SearchService\bin\Debug\net7.0\RabbitMQ.Client.dll
 C:\Users\mamma\AuctionApp\src\SearchService\bin\Debug\net7.0\Contracts.dll
 C:\Users\mamma\AuctionApp\src\SearchService\bin\Debug\net7.0\Contracts.pdb
-C:\Users\mamma\AuctionApp\src\SearchService\bin\Debug\net7.0\Core.dll
-C:\Users\mamma\AuctionApp\src\SearchService\bin\Debug\net7.0\Core.pdb
 C:\Users\mamma\Downloads\AuctionApp-main\AuctionApp-main\src\SearchService\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\mamma\Downloads\AuctionApp-main\AuctionApp-main\src\SearchService\bin\Debug\net7.0\appsettings.json
 C:\Users\mamma\Downloads\AuctionApp-main\AuctionApp-main\src\SearchService\bin\Debug\net7.0\SearchService.exe

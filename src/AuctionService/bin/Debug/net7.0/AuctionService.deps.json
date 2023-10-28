@@ -10,7 +10,6 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Contracts": "1.0.0",
-          "Core": "1.0.0",
           "MassTransit.EntityFrameworkCore": "8.1.1",
           "MassTransit.RabbitMQ": "8.1.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.13",
@@ -407,11 +406,6 @@
         "runtime": {
           "Contracts.dll": {}
         }
-      },
-      "Core/1.0.0": {
-        "runtime": {
-          "Core.dll": {}
-        }
       }
     }
   },
@@ -751,11 +745,6 @@
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
     },
     "Contracts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

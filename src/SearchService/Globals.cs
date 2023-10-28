@@ -9,7 +9,7 @@ global using MassTransit;
 global using Polly;
 global using Polly.Extensions.Http;
 global using Contracts;
-global using Core.Messages;
+global using SearchService.Messages;
 global using SearchService.DTOs;
 global using AutoMapper;
 
