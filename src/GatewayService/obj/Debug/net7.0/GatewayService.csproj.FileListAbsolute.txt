@@ -34,3 +34,4 @@ C:\Users\mamma\AuctionApp\src\GatewayService\obj\Debug\net7.0\refint\GatewayServ
 C:\Users\mamma\AuctionApp\src\GatewayService\obj\Debug\net7.0\GatewayService.pdb
 C:\Users\mamma\AuctionApp\src\GatewayService\obj\Debug\net7.0\GatewayService.genruntimeconfig.cache
 C:\Users\mamma\AuctionApp\src\GatewayService\obj\Debug\net7.0\ref\GatewayService.dll
+C:\Users\mamma\AuctionApp\src\GatewayService\bin\Debug\net7.0\appsettings.Docker.json
