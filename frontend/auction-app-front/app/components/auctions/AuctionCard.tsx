@@ -18,7 +18,7 @@ const AuctionCard = ({ auction }: Props) => {
         </div>
       </div>
       <div className="flex justify-between items-center mt-4">
-        <h3 className="text-teal-300">
+        <h3 className="text-teal-300 font-semibold">
           {auction.make} {auction.model}
         </h3>
         <p className="font-semibold text-sm text-sky-500">{auction.year}</p>
