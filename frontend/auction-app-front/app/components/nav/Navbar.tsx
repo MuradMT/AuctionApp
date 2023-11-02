@@ -1,7 +1,11 @@
 import React from "react";
 import Search from "./Search";
 import Logo from "./Logo";
-const Navbar = () => {
+import LoginButton from "./LoginButton";
+import { getCurrentUser } from "@/app/server/authAuctions";
+import UserActions from "./UserActions";
+const Navbar = async () => {
+  const user=await getCurrentUser();
   return (
     <>
       <header
@@ -11,7 +15,13 @@ const Navbar = () => {
       >
         <Logo/>
         <Search/>
-        <div className="Navbar__Header__Right">Login</div>
+        {
+          user?(
+            <UserActions/>
+          ):(
+            <LoginButton/>
+          )
+        }
       </header>
     </>
   );

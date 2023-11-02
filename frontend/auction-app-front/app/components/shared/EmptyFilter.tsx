@@ -10,7 +10,7 @@ type Props = {
 };
 
 const EmptyFilter = ({
-  title = "No matcches for this filter",
+  title = "No matches for this filter",
   subtitle = "Try changing or resetting the filter",
   showReset,
 }: Props) => {

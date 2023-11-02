@@ -11,8 +11,8 @@
   padding-bottom: 40px;
 }
 body{
-  background-color: #cccccc;
-  background-image: radial-gradient(rgba(0, 0, 255, 0.2), rgba(255, 255, 0, 0.05));
+  background-color: rgb(219 234 254);
+
 }
 .welcome-page li {
   list-style: none;
