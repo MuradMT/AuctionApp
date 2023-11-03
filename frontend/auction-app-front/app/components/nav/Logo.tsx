@@ -12,7 +12,7 @@ const Logo = () => {
          if(pathname !=='/') router.push('/')
          reset();    }
   return (
-    <div onClick={doReset} className="cursor-pointer flex items-center gap-2 text-3xl font-semibold text-violet-600">
+    <div onClick={doReset} className="cursor-pointer flex items-center gap-2 text-3xl font-bold text-violet-600">
             <RiAuctionFill size={34}/>
             <div>Auction of Azerbaijan</div>
         </div>

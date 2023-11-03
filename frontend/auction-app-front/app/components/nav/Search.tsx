@@ -33,11 +33,11 @@ const Search = () => {
                  focus:ring-0
                  text-sm
                  text-gray-600
-                 font-semibold
+                 font-bold
              '
              />
              <button onClick={search} title='search'>
-                <FaSearch size={34} className='bg-violet-600 text-white rounded-full p-2 cursor-pointer mx-2'/>
+                <FaSearch size={34} className='bg-violet-600 text-white rounded-full p-2 cursor-pointer mx-2 font-bold'/>
              </button>
     </div>
   )
