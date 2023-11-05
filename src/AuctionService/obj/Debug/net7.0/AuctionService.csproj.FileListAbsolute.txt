@@ -107,3 +107,10 @@ C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.Identity
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Google.Protobuf.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Grpc.AspNetCore.Server.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Grpc.Net.Client.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Grpc.Net.ClientFactory.dll
+C:\Users\mamma\AuctionApp\src\AuctionService\bin\Debug\net7.0\Grpc.Net.Common.dll

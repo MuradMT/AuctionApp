@@ -68,3 +68,4 @@ C:\Users\mamma\AuctionApp\src\IdentityService\obj\Debug\net7.0\refint\IdentitySe
 C:\Users\mamma\AuctionApp\src\IdentityService\obj\Debug\net7.0\IdentityService.pdb
 C:\Users\mamma\AuctionApp\src\IdentityService\obj\Debug\net7.0\IdentityService.genruntimeconfig.cache
 C:\Users\mamma\AuctionApp\src\IdentityService\obj\Debug\net7.0\ref\IdentityService.dll
+C:\Users\mamma\AuctionApp\src\IdentityService\bin\Debug\net7.0\Polly.dll

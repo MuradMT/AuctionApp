@@ -1,0 +1,11 @@
+﻿global using AutoMapper;
+global using BiddingService.DTOs;
+global using BiddingService.Models;
+global using Contracts;
+global using MassTransit;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using MongoDB.Entities;
+global using BiddingService.Consumers;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using MongoDB.Driver;
