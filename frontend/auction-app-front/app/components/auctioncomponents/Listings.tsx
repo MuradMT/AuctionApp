@@ -2,13 +2,13 @@
 import React, { useEffect, useState } from "react";
 import AuctionCard from "./AuctionCard";
 import { Auction, PagedResult } from "@/app/types";
-import AppPagination from "../shared/AppPagination";
+import AppPagination from "../sharedcomponents/AppPagination";
 import { getData } from "@/app/server/auctionActions";
 import Filters from "./Filters";
 import { useParamsStore } from "@/hooks/useParamsStore";
 import { shallow } from "zustand/shallow";
 import qs from "query-string";
-import EmptyFilter from "../shared/EmptyFilter";
+import EmptyFilter from "../sharedcomponents/EmptyFilter";
 const Listings = () => {
   const [data, setData] = useState<PagedResult<Auction>>();
   const params = useParamsStore(
@@ -18,6 +18,8 @@ const Listings = () => {
       searchTerm: state.searchTerm,
       orderBy: state.orderBy,
       filterBy: state.filterBy,
+      seller:state.seller,
+      winner:state.winner
     }),
     shallow
   );

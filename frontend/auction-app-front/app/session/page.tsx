@@ -1,6 +1,6 @@
 import React from 'react'
 import { getSession, getTokenWorkaround } from '../server/authAuctions'
-import Heading from '../components/shared/Heading';
+import Heading from '../components/sharedcomponents/Heading';
 import AuthTest from './AuthTest';
 
 const Page = async () => {

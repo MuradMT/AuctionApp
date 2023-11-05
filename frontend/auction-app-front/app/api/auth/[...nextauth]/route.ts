@@ -1,5 +1,4 @@
-import { NextAuthOptions } from "next-auth"
-import NextAuth from "next-auth/next"
+import NextAuth, { NextAuthOptions } from "next-auth"
 import DuendeIdentityServer6 from "next-auth/providers/duende-identity-server6"
 
 export const authOptions:NextAuthOptions={

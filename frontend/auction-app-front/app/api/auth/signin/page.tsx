@@ -1,4 +1,4 @@
-import EmptyFilter from '@/app/components/shared/EmptyFilter'
+import EmptyFilter from '@/app/components/sharedcomponents/EmptyFilter'
 import React from 'react'
 
 const Page = ({searchParams}:{searchParams:{callbackUrl:string}}) => {

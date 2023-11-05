@@ -47,7 +47,7 @@
           "dependencies": {
             "Duende.IdentityServer.AspNetIdentity": {
               "target": "Package",
-              "version": "[6.3.2, )"
+              "version": "[6.3.0, )"
             },
             "Microsoft.AspNetCore.Authentication.Google": {
               "target": "Package",
@@ -55,25 +55,29 @@
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.12, )"
+              "version": "[7.0.8, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[7.0.4, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.2.4, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
