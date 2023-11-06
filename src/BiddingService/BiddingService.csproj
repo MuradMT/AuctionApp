@@ -27,9 +27,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
   </ItemGroup>
-    
-      <ItemGroup>
+  <ItemGroup>
     <Protobuf Include="protos/auctions.proto" GrpcServices="Client" />
   </ItemGroup>
-
 </Project>

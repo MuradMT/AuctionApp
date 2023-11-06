@@ -5,6 +5,7 @@
 #pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
+using Grpc.Net.Client;
 using grpc = global::Grpc.Core;
 
 namespace AuctionService {
@@ -93,9 +94,18 @@ namespace AuctionService {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::AuctionService.GrpcAuctionResponse GetAuction(global::AuctionService.GetAuctionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetAuction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
+     
+
+        internal class GrpcAuctionClient
+        {
+            private GrpcChannel channel;
+
+            public GrpcAuctionClient(GrpcChannel channel)
+            {
+                this.channel = channel;
+            }
+        }
+        }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::AuctionService.GrpcAuctionResponse GetAuction(global::AuctionService.GetAuctionRequest request, grpc::CallOptions options)
       {

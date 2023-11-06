@@ -1,13 +1,18 @@
-﻿
-
-using Grpc.Core;
+﻿using Grpc.Core;
 using Status = Grpc.Core.Status;
 
 namespace AuctionService;
 
-public class GrpcAuctionService(AuctionDbContext _dbContext): GrpcAuction.GrpcAuctionBase
+public class GrpcAuctionService : GrpcAuction.GrpcAuctionBase
 {
-   public override async Task<GrpcAuctionResponse> GetAuction(GetAuctionRequest request, 
+    private readonly AuctionDbContext _dbContext;
+
+    public GrpcAuctionService(AuctionDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
+    public override async Task<GrpcAuctionResponse> GetAuction(GetAuctionRequest request, 
         ServerCallContext context) 
     {
         Console.WriteLine("==> Received Grpc request for auction");
@@ -29,4 +34,3 @@ public class GrpcAuctionService(AuctionDbContext _dbContext): GrpcAuction.GrpcAu
         return response;
     }
 }
-
