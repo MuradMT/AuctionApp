@@ -1,12 +1,12 @@
 import NextAuth, { NextAuthOptions } from "next-auth"
-import DuendeIdentityServer6 from "next-auth/providers/duende-identity-server6"
+import DuendeIDS6Provider from "next-auth/providers/duende-identity-server6"
 
 export const authOptions:NextAuthOptions={
       session:{
         strategy:'jwt'
       },
       providers:[
-        DuendeIdentityServer6({
+        DuendeIDS6Provider({
             id:'id-server',
             clientId:'nextApp',
             clientSecret:'secret',
