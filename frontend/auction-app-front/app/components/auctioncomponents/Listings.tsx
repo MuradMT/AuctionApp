@@ -9,8 +9,9 @@ import { useParamsStore } from "@/hooks/useParamsStore";
 import { shallow } from "zustand/shallow";
 import qs from "query-string";
 import EmptyFilter from "../sharedcomponents/EmptyFilter";
+import { useAuctionStore } from "@/hooks/useAuctionStore";
 const Listings = () => {
-  const [data, setData] = useState<PagedResult<Auction>>();
+  const [loading, setLoading] = useState(true);
   const params = useParamsStore(
     (state) => ({
       pageNumber: state.pageNumber,
@@ -18,11 +19,20 @@ const Listings = () => {
       searchTerm: state.searchTerm,
       orderBy: state.orderBy,
       filterBy: state.filterBy,
-      seller:state.seller,
-      winner:state.winner
+      seller: state.seller,
+      winner: state.winner,
     }),
     shallow
   );
+  const data = useAuctionStore(
+    (state) => ({
+      auctions: state.auctions,
+      totalCount: state.totalCount,
+      pageCount: state.pageCount,
+    }),
+    shallow
+  );
+  const setData = useAuctionStore((state) => state.setData);
   const setParams = useParamsStore((state) => state.setParams);
   const url = qs.stringifyUrl({ url: "", query: params });
   function setPageNumber(pageNumber: number) {
@@ -31,9 +41,10 @@ const Listings = () => {
   useEffect(() => {
     getData(url).then((data) => {
       setData(data);
+      setLoading(false);
     });
-  }, [url]);
-  if (!data) return <h3 className="text-sky-500 font-semibold">Loading...</h3>;
+  }, [url,setData]);
+  if (loading) return <h3 className="text-sky-500 font-semibold">Loading...</h3>;
   return (
     <>
       <Filters />
@@ -42,7 +53,7 @@ const Listings = () => {
       ) : (
         <>
           <div className="grid grid-cols-4 gap-6">
-            {data.results.map((auction) => (
+            {data.auctions.map((auction) => (
               <AuctionCard auction={auction} key={auction.id} />
             ))}
           </div>

@@ -3,7 +3,7 @@
 //demonstrate any api call on client side
 //rather than we are showing the pure data
 //it is just amazing feature
-import { Auction, PagedResult } from "@/app/types";
+import { Auction, Bid, PagedResult } from "@/app/types";
 import { fetchWrapper } from "@/lib/fetchWrapper";
 import { revalidatePath } from "next/cache";
 import { FieldValues } from "react-hook-form";
@@ -32,3 +32,10 @@ export async function updateAuction(data:FieldValues,id:string) {
  export async function deleteAuction(id:string){
       return await fetchWrapper.del(`auctions/${id}`);
 }
+export async function getBidsForAuction(id: string): Promise<Bid[]> {
+      return await fetchWrapper.get(`bids/${id}`);
+  }
+  
+  export async function placeBidForAuction(auctionId: string, amount: number) {
+      return await fetchWrapper.post(`bids?auctionId=${auctionId}&amount=${amount}`, {})
+  }

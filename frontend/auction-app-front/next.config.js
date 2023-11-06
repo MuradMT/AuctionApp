@@ -8,7 +8,8 @@ const nextConfig = {
                 hostname:"cdn.pixabay.com"
             }
         ]
-    }
+    },
+    output:'standalone'
 }
 
 module.exports = nextConfig

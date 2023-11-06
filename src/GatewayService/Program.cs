@@ -9,7 +9,7 @@ builder.Services.AddAuthentication(
  JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
 {
-     options.Configuration = new OpenIdConnectConfiguration();
+     //options.Configuration = new OpenIdConnectConfiguration();
      options.Authority = builder.Configuration["IdentityServiceUrl"];
      options.RequireHttpsMetadata = false;
      options.TokenValidationParameters.ValidateAudience = false;
@@ -28,6 +28,6 @@ app.UseCors();
 app.MapReverseProxy();
 app.UseAuthentication();
 app.UseAuthorization();
-IdentityModelEventSource.ShowPII = true;
+//IdentityModelEventSource.ShowPII = true;
 //system.identitymodel.tokens.jwt nuget added
 app.Run();
